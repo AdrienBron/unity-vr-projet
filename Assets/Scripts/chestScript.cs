@@ -1,13 +1,16 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class getItem : MonoBehaviour
+public class chestScript : MonoBehaviour
 {
+
     public GameObject uiGet;
     public playerScript player;
 
     private PlayerInputActions input;
     private InputAction interact;
+
+    private bool isOpen=false;
 
     void Awake()
     {
@@ -29,7 +32,7 @@ public class getItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isOpen)
         {
             uiGet.SetActive(true);
         }
@@ -37,7 +40,7 @@ public class getItem : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isOpen)
         {
             uiGet.SetActive(false);
         }
@@ -45,9 +48,9 @@ public class getItem : MonoBehaviour
 
     private void OnInteract(InputAction.CallbackContext ctx)
     {
-        if (!uiGet.activeSelf) return;
-
-        player.key.SetActive(true);
-        Destroy(gameObject);
+        if (!uiGet.activeSelf || !player.key.activeSelf) return;
+        player.paper.SetActive(true);
+        uiGet.SetActive(false);
+        isOpen = true;
     }
 }
