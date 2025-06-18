@@ -87464,7 +87464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b8281fa16d69848877b0f852846c62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gateAnimator: {fileID: 0}
+  gateAnimator: {fileID: 409767023}
   openTrigger: Open
   closeTrigger: Close
 --- !u!65 &1648729323
