@@ -17,7 +17,7 @@ public class PillarTrigger : MonoBehaviour
             Door doorController = door.GetComponent<Door>();
             if (doorController != null)
             {
-                doorController.OpenDoor(); // Appelle la coroutine d’ouverture animée
+                doorController.OpenDoor();
             }
             else
             {

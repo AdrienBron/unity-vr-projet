@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Door : MonoBehaviour
 {
-    public float openY = 15f;       // Position finale en Y
-    public float duration = 99999999999999999999999999f;    // Durée en secondes
+    public float openY = 15f;
+    public float duration = 50000f;
 
     private bool isOpening = false;
 
@@ -26,11 +26,11 @@ public class Door : MonoBehaviour
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            float t = Mathf.SmoothStep(0f, 1f, elapsed / duration); // easing
+            float t = Mathf.SmoothStep(0f, 1f, elapsed / duration);
             transform.position = Vector3.Lerp(startPos, endPos, t);
             yield return null;
         }
 
-        transform.position = endPos; // Snap to final position
+        transform.position = endPos;
     }
 }
