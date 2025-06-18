@@ -104,8 +104,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""d22d9d4a-e638-4f2e-ba15-09b1af933a2f"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""6ea846d4-3476-4b30-bb62-6b2fa3dd788c"",
+                    ""path"": ""<XRController>{LeftHand}/{TriggerButton}"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -115,8 +115,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6ea846d4-3476-4b30-bb62-6b2fa3dd788c"",
-                    ""path"": ""<XRSimulatedController>{RightHand}/triggerButton"",
+                    ""id"": ""93a59caa-d58e-41bc-a378-2986f085db56"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
