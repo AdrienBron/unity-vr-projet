@@ -10,23 +10,31 @@ public class PressurePlate : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("CubeGrabbable"))
+        if (!other.CompareTag("CubeGrabbable"))
+            return;
+
+        objectsOnPlate++;
+        Debug.Log($"[PressurePlate] OnTriggerEnter: {other.name} count = {objectsOnPlate}");
+
+        if (objectsOnPlate == 1)
         {
-            objectsOnPlate++;
-            if (objectsOnPlate == 1)
-                gateAnimator.SetTrigger(openTrigger);
+            Debug.Log("[PressurePlate] First object placed → Open gate");
+            gateAnimator.SetTrigger(openTrigger);
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("CubeGrabbable"))
+        if (!other.CompareTag("CubeGrabbable"))
+            return;
+
+        objectsOnPlate = Mathf.Max(0, objectsOnPlate - 1);
+        Debug.Log($"[PressurePlate] OnTriggerExit: {other.name} count = {objectsOnPlate}");
+
+        if (objectsOnPlate == 0)
         {
-            objectsOnPlate = Mathf.Max(0, objectsOnPlate - 1);
-            if (objectsOnPlate == 0)
-                gateAnimator.SetTrigger(closeTrigger);
+            Debug.Log("[PressurePlate] Last object removed → Close gate");
+            gateAnimator.SetTrigger(closeTrigger);
         }
     }
 }
-// Ce script gère une plaque de pression qui ouvre et ferme une porte lorsque des objets sont placés ou retirés.
-// Il utilise un Animator pour contrôler les états d'animation de la porte en fonction du nombre d'objets sur la plaque.
