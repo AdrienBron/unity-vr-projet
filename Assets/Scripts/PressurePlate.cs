@@ -10,7 +10,7 @@ public class PressurePlate : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Grabbable"))
+        if (other.CompareTag("CubeGrabbable"))
         {
             objectsOnPlate++;
             if (objectsOnPlate == 1)
@@ -20,7 +20,7 @@ public class PressurePlate : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Grabbable"))
+        if (other.CompareTag("CubeGrabbable"))
         {
             objectsOnPlate = Mathf.Max(0, objectsOnPlate - 1);
             if (objectsOnPlate == 0)
