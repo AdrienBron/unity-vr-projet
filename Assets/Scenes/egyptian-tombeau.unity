@@ -417,7 +417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9587069cb468e3f42bdb5a6c69ad88ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.087
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9587069cb468e3f42bdb5a6c69ad88ef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -685,8 +685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6156ea9cd037a644cbc402baa3fb0696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openOffset: {x: 0, y: 3, z: 0}
-  openDuration: 1.5
+  openY: 25
+  duration: 2
 --- !u!1 &325919575 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 457f9a2843020584280add35bc7dac02, type: 3}
@@ -1511,6 +1511,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b68118be097f8564aace9467877903d6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1584917580}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b68118be097f8564aace9467877903d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1584917584}
   m_SourcePrefab: {fileID: 100100000, guid: b68118be097f8564aace9467877903d6, type: 3}
 --- !u!1001 &651663702
 PrefabInstance:
@@ -3021,6 +3024,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3792188, y: 0.83728516, z: 2.508125}
   m_Center: {x: 0.0000009536742, y: 0.0000012218952, z: 0.000011622907}
+--- !u!54 &1584917584
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584917576}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1609230029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3131,6 +3161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Totem
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b62485b2c6df08849855f79da2401766, type: 3}
+      propertyPath: m_TagString
+      value: Totem
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b62485b2c6df08849855f79da2401766, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.03
@@ -3145,15 +3179,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b62485b2c6df08849855f79da2401766, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.502
+      value: 23.289
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b62485b2c6df08849855f79da2401766, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.871
+      value: 0.613
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b62485b2c6df08849855f79da2401766, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.479
+      value: -14.511
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b62485b2c6df08849855f79da2401766, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3606,7 +3640,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2.04, z: 1}
+  m_Size: {x: 1, y: 2.1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1847141019
 MeshRenderer:
@@ -3670,8 +3704,8 @@ Transform:
   m_GameObject: {fileID: 1847141017}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.962, y: 5.163, z: -12.195}
-  m_LocalScale: {x: 1.5, y: 0.2, z: 1.5}
+  m_LocalPosition: {x: 22.962, y: 5.09, z: -12.089}
+  m_LocalScale: {x: 1.5, y: 0.2, z: 1.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

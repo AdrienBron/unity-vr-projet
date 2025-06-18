@@ -1,41 +1,36 @@
 using UnityEngine;
+using System.Collections;
 
-public class Door: MonoBehaviour
+public class Door : MonoBehaviour
 {
-    public Vector3 openOffset = new Vector3(0, 3, 0);
-    public float openDuration = 1.5f;
+    public float openY = 15f;       // Position finale en Y
+    public float duration = 99999999999999999999999999f;    // Durée en secondes
 
-    private Vector3 closedPosition;
-    private Vector3 openPosition;
     private bool isOpening = false;
-
-    private void Start()
-    {
-        closedPosition = transform.position;
-        openPosition = closedPosition + openOffset;
-    }
 
     public void OpenDoor()
     {
         if (!isOpening)
-        {
-            StartCoroutine(OpenRoutine());
-        }
+            StartCoroutine(OpenDoorCoroutine());
     }
 
-    private System.Collections.IEnumerator OpenRoutine()
+    private IEnumerator OpenDoorCoroutine()
     {
         isOpening = true;
+
+        Vector3 startPos = transform.position;
+        Vector3 endPos = new Vector3(startPos.x, openY, startPos.z);
+
         float elapsed = 0f;
 
-        while (elapsed < openDuration)
+        while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsed / openDuration);
-            transform.position = Vector3.Lerp(closedPosition, openPosition, t);
+            float t = Mathf.SmoothStep(0f, 1f, elapsed / duration); // easing
+            transform.position = Vector3.Lerp(startPos, endPos, t);
             yield return null;
         }
 
-        transform.position = openPosition;
+        transform.position = endPos; // Snap to final position
     }
 }

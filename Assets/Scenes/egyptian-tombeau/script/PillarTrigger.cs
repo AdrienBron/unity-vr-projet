@@ -10,32 +10,26 @@ public class PillarTrigger : MonoBehaviour
     {
         if (hasActivated) return;
 
-        if (other.CompareTag("Totem"))
+        if (door != null)
         {
-            Debug.Log("Totem détecté sur le trigger !");
+            Debug.Log("Door détectée : " + door.name);
 
-            if (door != null)
+            Door doorController = door.GetComponent<Door>();
+            if (doorController != null)
             {
-                Debug.Log("Door détectée : " + door.name);
-
-                Door doorController = door.GetComponent<Door>();
-                if (doorController != null)
-                {
-                    doorController.StopAllCoroutines();
-                }
-
-                Vector3 newPos = door.transform.position;
-                newPos.y = newYPosition;
-                door.transform.position = newPos;
-
-                Debug.Log("Nouvelle position : " + door.transform.position);
-
-                hasActivated = true;
+                doorController.OpenDoor(); // Appelle la coroutine d’ouverture animée
             }
             else
             {
-                Debug.LogWarning("⚠️ Aucune porte assignée dans l’inspecteur !");
+                Debug.LogWarning("⚠️ Le script DoorController est manquant sur la porte !");
             }
+
+            hasActivated = true;
         }
+        else
+        {
+            Debug.LogWarning("⚠️ Aucune porte assignée dans l’inspecteur !");
+        }
+
     }
 }
