@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class KeypadManager : MonoBehaviour
 {
     private string currentInput = "";
+    public Animator anim;
 
     public void ReceiveInput(string val)
     {
@@ -14,9 +16,17 @@ public class KeypadManager : MonoBehaviour
         if (currentInput == "354")
         {
             Debug.Log("Code correct !");
-            SceneManager.LoadScene("boatRoom");
+            anim.SetTrigger("open");
+            StartCoroutine("IEnumerator");
 
         }
+    }
+
+    public IEnumerator loadScene()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("boatRoom");
+
     }
 
     public void ResetInput() => currentInput = "";
