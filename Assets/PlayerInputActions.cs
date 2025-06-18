@@ -116,7 +116,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""6ea846d4-3476-4b30-bb62-6b2fa3dd788c"",
-                    ""path"": """",
+                    ""path"": ""<XRSimulatedController>{RightHand}/triggerButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
