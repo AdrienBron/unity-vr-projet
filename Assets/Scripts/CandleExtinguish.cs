@@ -1,6 +1,5 @@
 using UnityEngine;
-using System.Linq;
-
+using System.Collections.Generic;
 
 [RequireComponent(typeof(Collider))]
 public class CandleExtinguish : MonoBehaviour
@@ -8,11 +7,19 @@ public class CandleExtinguish : MonoBehaviour
     MeshRenderer[] flameRenderers;
     Light        flameLight;
 
+    [Header("Swap Body Material")]
+    public MeshRenderer candleBodyRenderer;  // drag-drop de votre mesh “candle body”
+    public Material    unlitMaterial;        // assignez ici Candle01
+
     void Start()
     {
-        flameRenderers = GetComponentsInChildren<MeshRenderer>()
-            .Where(mr => mr.gameObject.name.Contains("Quad"))
-            .ToArray();
+        // repère uniquement les quads de la flamme
+        var allMR = GetComponentsInChildren<MeshRenderer>();
+        var list   = new List<MeshRenderer>();
+        foreach (var mr in allMR)
+            if (mr.gameObject.name.Contains("Quad"))
+                list.Add(mr);
+        flameRenderers = list.ToArray();
 
         flameLight = GetComponentInChildren<Light>();
     }
@@ -25,11 +32,12 @@ public class CandleExtinguish : MonoBehaviour
 
     void Extinguish()
     {
-        // Désactive l’affichage des quads
-        foreach (var mr in flameRenderers)
-            mr.enabled = false;
-        // Désactive la lumière
-        if (flameLight != null)
-            flameLight.enabled = false;
+        // 1) éteindre quads + lumière
+        foreach (var mr in flameRenderers) mr.enabled = false;
+        if (flameLight != null) flameLight.enabled = false;
+
+        // 2) swap du matériau du corps
+        if (candleBodyRenderer != null && unlitMaterial != null)
+            candleBodyRenderer.material = unlitMaterial;
     }
 }
