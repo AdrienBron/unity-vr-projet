@@ -30,7 +30,7 @@ public class KeypadManager : MonoBehaviour
         {
             Debug.Log("Code correct !");
             anim.SetTrigger("open");
-            StartCoroutine("IEnumerator");
+            StartCoroutine(loadScene());
 
         }
         currentInput = "";
