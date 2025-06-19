@@ -19,6 +19,7 @@ TagManager:
   - B9
   - BE
   - CubeGrabbable
+  - Water
   layers:
   - Default
   - TransparentFX
