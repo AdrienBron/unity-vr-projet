@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class DetecteurTrigger : MonoBehaviour
@@ -9,6 +10,7 @@ public class DetecteurTrigger : MonoBehaviour
     public float delay = 1.0f;
 
     private bool hasPlayedSound = false;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Crane"))
@@ -36,5 +38,8 @@ public class DetecteurTrigger : MonoBehaviour
             doorAudioSource.Play();
             hasPlayedSound = true;
         }
+        yield return new WaitForSeconds(4.0f);
+
+        SceneManager.LoadScene(1);
     }
 }
