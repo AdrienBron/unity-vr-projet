@@ -1,13 +1,40 @@
 using UnityEngine;
+using System.Collections;
 
 public class DetecteurTrigger : MonoBehaviour
 {
+    public Animator prisonDoorAnimator;
+    public Light indicatorLight;
+    public AudioSource doorAudioSource;
+    public float delay = 1.0f;
+
+    private bool hasPlayedSound = false;
     private void OnTriggerEnter(Collider other)
     {
-        // Vérifie si l'objet entrant a le tag "Crane"
         if (other.CompareTag("Crane"))
         {
-            Debug.Log("collider");
+            StartCoroutine(TriggerSequence());
+        }
+    }
+
+    private IEnumerator TriggerSequence()
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (prisonDoorAnimator != null)
+        {
+            prisonDoorAnimator.SetTrigger("Open");
+        }
+
+        if (indicatorLight != null)
+        {
+            indicatorLight.color = Color.green;
+        }
+
+        if (doorAudioSource != null && !hasPlayedSound)
+        {
+            doorAudioSource.Play();
+            hasPlayedSound = true;
         }
     }
 }
