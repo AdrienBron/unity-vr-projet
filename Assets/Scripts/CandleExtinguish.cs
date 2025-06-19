@@ -5,39 +5,46 @@ using System.Collections.Generic;
 public class CandleExtinguish : MonoBehaviour
 {
     MeshRenderer[] flameRenderers;
-    Light        flameLight;
+    Light          flameLight;
+    bool           isLit = true;
 
     [Header("Swap Body Material")]
-    public MeshRenderer candleBodyRenderer;  // drag-drop de votre mesh “candle body”
-    public Material    unlitMaterial;        // assignez ici Candle01
+    public MeshRenderer candleBodyRenderer;
+    public Material    unlitMaterial;
 
     void Start()
     {
-        // repère uniquement les quads de la flamme
+        // Récupère les "quads" de flamme
         var allMR = GetComponentsInChildren<MeshRenderer>();
-        var list   = new List<MeshRenderer>();
+        var list  = new List<MeshRenderer>();
         foreach (var mr in allMR)
             if (mr.gameObject.name.Contains("Quad"))
                 list.Add(mr);
         flameRenderers = list.ToArray();
 
+        // Récupère la light de la flamme
         flameLight = GetComponentInChildren<Light>();
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Water"))
+        if (other.CompareTag("Water") && isLit)
             Extinguish();
     }
 
     void Extinguish()
     {
-        // 1) éteindre quads + lumière
+        isLit = false;  // marque la bougie comme éteinte
+
+        // désactive les quads et la lumière
         foreach (var mr in flameRenderers) mr.enabled = false;
         if (flameLight != null) flameLight.enabled = false;
 
-        // 2) swap du matériau du corps
+        // swap du matériau du corps
         if (candleBodyRenderer != null && unlitMaterial != null)
             candleBodyRenderer.material = unlitMaterial;
     }
+
+    // Expose l’état pour le manager
+    public bool IsLit => isLit;
 }
