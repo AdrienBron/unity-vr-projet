@@ -8,7 +8,7 @@ public class changeScene : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player entered the trigger zone, changing scene...");
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
 }

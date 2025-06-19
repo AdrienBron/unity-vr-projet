@@ -3,11 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    public string sceneToLoad = "boatRoom";
 
     public void StartGame()
     {
-        SceneManager.LoadScene(sceneToLoad);
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame()
