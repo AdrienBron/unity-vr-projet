@@ -18,11 +18,13 @@ TagManager:
   - B8
   - B9
   - BE
+  - CubeGrabbable
+  - Water
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
