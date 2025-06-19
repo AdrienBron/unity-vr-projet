@@ -26326,6 +26326,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.000000010536713
       objectReference: {fileID: 0}
+    - target: {fileID: 54324626887154284, guid: fb71d571078e952469f83dcc9bb68890, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -100481,7 +100485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6137550166618092935, guid: ae05393cde4f0874593179ad6d2c339c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.37833998
+      value: 0.1722779
       objectReference: {fileID: 0}
     - target: {fileID: 6137550166618092935, guid: ae05393cde4f0874593179ad6d2c339c, type: 3}
       propertyPath: m_LocalScale.z
@@ -100489,11 +100493,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6137550166618092935, guid: ae05393cde4f0874593179ad6d2c339c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.443
+      value: -0.446
       objectReference: {fileID: 0}
     - target: {fileID: 6137550166618092935, guid: ae05393cde4f0874593179ad6d2c339c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.472
+      value: 0.646
       objectReference: {fileID: 0}
     - target: {fileID: 6137550166618092935, guid: ae05393cde4f0874593179ad6d2c339c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -100542,6 +100546,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6802447506477772605, guid: ae05393cde4f0874593179ad6d2c339c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1847126612}
+    - targetCorrespondingSourceObject: {fileID: 6802447506477772605, guid: ae05393cde4f0874593179ad6d2c339c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1847126613}
   m_SourcePrefab: {fileID: 100100000, guid: ae05393cde4f0874593179ad6d2c339c, type: 3}
 --- !u!1 &1847126611 stripped
 GameObject:
@@ -100564,6 +100571,27 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0013872, y: 0.8169238, z: 0.9764792}
+  m_Center: {x: 0.000000064323466, y: 0.40846202, z: 0.035806436}
+--- !u!65 &1847126613
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847126611}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
