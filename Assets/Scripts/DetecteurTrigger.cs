@@ -40,6 +40,6 @@ public class DetecteurTrigger : MonoBehaviour
         }
         yield return new WaitForSeconds(4.0f);
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
 }
