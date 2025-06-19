@@ -14,6 +14,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/game-over.unity
     guid: 6dc5386c557baf24c8415f88e1cb665a
+    path: Assets/Scenes/boatRoom.unity
+    guid: ff0618f3ddaf39c41b6409c5ca7b6c61
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: c9191eec1d376cc49a2e2ae54ab9d089
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}

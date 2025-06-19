@@ -20,7 +20,7 @@ public class KeypadManager : MonoBehaviour
     public IEnumerator loadScene()
     {
         yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("boatRoom");
+        SceneManager.LoadScene("MainMenu");
 
     }
 
