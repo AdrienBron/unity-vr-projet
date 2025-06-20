@@ -1,1 +1,1 @@
-## Lire le SOLTUION.md pour les solutions du jeu.
+## Lire le SOLUTION.md pour les solutions du jeu.
