@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ISITECH\\Documents\\unity-vr-projet\\",
+  "WorkspaceRootPath": "C:\\Users\\Paris-3\\Documents\\GitHub\\unity-vr-projet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ISITECH\\Documents\\unity-vr-projet\\Assets\\Scripts\\DetecteurTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\DetecteurTrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8848724B-7A35-344D-C7D6-53ED412E8341}|Assembly-CSharp.csproj|c:\\users\\paris-3\\documents\\github\\unity-vr-projet\\assets\\scenes\\egyptian-tombeau\\script\\changescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8848724B-7A35-344D-C7D6-53ED412E8341}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\egyptian-tombeau\\script\\changescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8848724B-7A35-344D-C7D6-53ED412E8341}|Assembly-CSharp.csproj|c:\\users\\paris-3\\documents\\github\\unity-vr-projet\\assets\\scripts\\detecteurtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8848724B-7A35-344D-C7D6-53ED412E8341}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\detecteurtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,10 +23,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "changeScene.cs",
+              "DocumentMoniker": "C:\\Users\\Paris-3\\Documents\\GitHub\\unity-vr-projet\\Assets\\Scenes\\egyptian-tombeau\\script\\changeScene.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\egyptian-tombeau\\script\\changeScene.cs",
+              "ToolTip": "C:\\Users\\Paris-3\\Documents\\GitHub\\unity-vr-projet\\Assets\\Scenes\\egyptian-tombeau\\script\\changeScene.cs",
+              "RelativeToolTip": "Assets\\Scenes\\egyptian-tombeau\\script\\changeScene.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T14:51:21.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "DetecteurTrigger.cs",
-              "DocumentMoniker": "C:\\Users\\ISITECH\\Documents\\unity-vr-projet\\Assets\\Scripts\\DetecteurTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\Paris-3\\Documents\\GitHub\\unity-vr-projet\\Assets\\Scripts\\DetecteurTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DetecteurTrigger.cs",
-              "ToolTip": "C:\\Users\\ISITECH\\Documents\\unity-vr-projet\\Assets\\Scripts\\DetecteurTrigger.cs",
+              "ToolTip": "C:\\Users\\Paris-3\\Documents\\GitHub\\unity-vr-projet\\Assets\\Scripts\\DetecteurTrigger.cs",
               "RelativeToolTip": "Assets\\Scripts\\DetecteurTrigger.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
